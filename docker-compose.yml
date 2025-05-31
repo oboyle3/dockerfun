@@ -11,7 +11,7 @@ services:
     depends_on:
       - db
     environment:
-      - DB_NAME=caddie_universe_
+      - DB_NAME=caddie_universe
       - DB_USER=enigma
       - DB_PASSWORD=Larrybird33
       - DB_HOST=db
