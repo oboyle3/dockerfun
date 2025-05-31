@@ -11,16 +11,16 @@ services:
     depends_on:
       - db
     environment:
-      - DB_NAME=caddie_universe
-      - DB_USER=enigma
-      - DB_PASSWORD=Larrybird33
+      - DB_NAME=enigma
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
       - DB_HOST=db
       - DB_PORT=5432
 
   db:
     image: postgres:15
     environment:
-      - POSTGRES_DB=postgres
+      - POSTGRES_DB=enigma
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     ports:
