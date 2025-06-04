@@ -1,12 +1,49 @@
-<!-- enigmaapp/templates/enigmaapp/custom_page.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Custom Page</title>
+    <title>Encryption Explorer</title>
 </head>
 <body>
-    <h1>Welcome to the Custom Page!</h1>
-    <p>This is a custom page within the enigmaapp.</p>
+
+    <h1>Welcome to Encryption Explorer</h1>
+
+    <p>Inspired by the WWII Enigma Machine, this site lets you learn about and experiment with encryption algorithms.</p>
+
+    <!-- Navigation Links -->
+    <nav>
+        <ul>
+            <li><a href="{% url 'about' %}">About Encryption</a></li>
+            <li><a href="{% url 'algorithms' %}">Algorithms</a></li>
+            <li><a href="{% url 'playground' %}">Try It Yourself</a></li>
+            <li><a href="{% url 'history' %}">History of Encryption</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <!-- Quick Intro or Call to Action -->
+    <section>
+        <h2>Get Started</h2>
+        <p>Choose an algorithm, enter your message, and see how encryption works!</p>
+        <a>Go to Playground</a>
+    </section>
+
+    <hr>
+
+    <!-- Featured Algorithm Examples -->
+    <section>
+        <h2>Popular Algorithms</h2>
+        <ul>
+            <li><strong>Caesar Cipher</strong>: Shift letters by a fixed amount.</li>
+            <li><strong>Substitution Cipher</strong>: Replace each letter with a different one.</li>
+            <li><strong>Enigma Simulator</strong>: Inspired by the real WWII machine.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Created for learning and fun. © 2025 Encryption Explorer</p>
+    </footer>
+
 </body>
 </html>

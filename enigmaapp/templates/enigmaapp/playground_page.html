@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Playground - Try Encryption</title>
+</head>
+<body>
+
+    <h1>Try the Caesar Cipher</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <label for="message">Enter your message:</label><br>
+        <textarea name="message" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="shift">Shift amount (e.g. 3):</label><br>
+        <input type="number" name="shift" value="3" required><br><br>
+
+        <button type="submit">Encrypt</button>
+    </form>
+
+    {% if encrypted_message %}
+        <h2>Encrypted Message:</h2>
+        <p>{{ encrypted_message }}</p>
+    {% endif %}
+
+    <p><a href="{% url 'custom_page' %}">Back to Home</a></p>
+
+</body>
+</html>
