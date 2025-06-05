@@ -1,12 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Algorithms Page </title>
+    <meta charset="UTF-8">
+    <title>Playground - Try Encryption</title>
 </head>
 <body>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+    <h1>Try this algorithm </h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <label for="message">Enter your message:</label><br>
+        <textarea name="message" rows="4" cols="50" required></textarea><br><br>
+
+        <button type="submit">Move to lowercase</button>
+    </form>
+
+    {% if message2 %}
+        <h2>Encrypted Message:</h2>
+        <p>{{ message2 }}</p>
+    {% endif %}
+
+    <p><a href="{% url 'custom_page' %}">Back to Home</a></p>
 
 </body>
 </html>

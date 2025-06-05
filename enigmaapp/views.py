@@ -13,6 +13,7 @@ def algorithms(request):
 def playground(request):
     encrypted_message = None  # Initialize the result variable
 
+
     if request.method == "POST":
         message = request.POST.get('message', '')  # Get message input
         shift = int(request.POST.get('shift', 0))  # Get shift input
@@ -37,3 +38,16 @@ def playground(request):
 
 def history(request):
     return render(request, 'enigmaapp/history_page.html')
+
+
+from django.shortcuts import render
+
+def lowercase_playground(request):
+    message2 = None  # This will store the output
+
+    if request.method == "POST":
+        message2 = request.POST.get('message', '')
+        message2 = message2.lower()  # Convert to lowercase
+
+    return render(request, 'enigmaapp/algorithms_page.html', {'message2': message2})
+
