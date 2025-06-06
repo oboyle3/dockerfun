@@ -1,4 +1,4 @@
-version: '3'
+
 
 services:
   web:
@@ -11,7 +11,7 @@ services:
     depends_on:
       - db
     environment:
-      - DB_NAME=enigma
+      - DB_NAME=caddie_universe_db
       - DB_USER=postgres
       - DB_PASSWORD=postgres
       - DB_HOST=db
@@ -20,7 +20,7 @@ services:
   db:
     image: postgres:15
     environment:
-      - POSTGRES_DB=enigma
+      - POSTGRES_DB=caddie_universe_db  # updated to match DB_NAME
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     ports:
